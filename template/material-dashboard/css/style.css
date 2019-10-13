@@ -1,0 +1,12 @@
+.login {
+    padding-top: 100px !important;
+}
+.login-form {
+    padding: 10px ;
+}
+a[aria-expanded=true] .caret {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

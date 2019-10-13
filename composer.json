@@ -1,0 +1,29 @@
+{
+    "name": "spl/yii2-material-assets",
+    "description": "Material Ui assets for yii2",
+    "type": "yii2-extension",
+    "keywords": ["yii2","theme","assets","admin","dashboard","ui","template","material","extension"],
+    "license": "MIT",    
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "sanpyaelin",
+            "email": "sanpyaelin.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "paskuale75\\": ""
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
