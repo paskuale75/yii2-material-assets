@@ -112,8 +112,6 @@ using bundled assets
 ### Sidebar menu - Widget Menu
 
 ```php
-        use paskuale75\widgets\Menu as SPLmenu;
-        
         $menu = SPLmenu::widget(
             [
                 'items' => [
@@ -157,7 +155,7 @@ example:
 namespace common\models;
 
 use Yii;
-use spl\widgets\Menu as SPLmenu;
+use paskuale75\widgets\Menu as SPLmenu;
 
 class Menu  
 {
