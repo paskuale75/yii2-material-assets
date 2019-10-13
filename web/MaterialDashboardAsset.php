@@ -11,7 +11,7 @@ use yii\web\AssetBundle as BaseMDAsset;
  */
 class MaterialDashboardAsset extends BaseMDAsset
 {
-    public $sourcePath = '@vendor/spl/yii2-material-assets/template/material-dashboard';
+    public $sourcePath = '@vendor/paskuale75/yii2-material-assets/template/material-dashboard';
 
     public $css = [
         'css/style.css',
