@@ -81,8 +81,8 @@ Default config.
 'components' => [
     'assetManager' => [
         'bundles' => [
-            'spl\web\MaterialDashboardAsset' => [
-		'siteTitle' = 'Your Site Name',
+            'paskuale75\web\MaterialDashboardAsset' => [
+		'siteTitle' => 'Your Site Name',
                 'sidebarColor' => 'rose',
                 'sidebarBackgroundColor' => 'black',
 		'sidebarBackgroundImage' => 'img url'
