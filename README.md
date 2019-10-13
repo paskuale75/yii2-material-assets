@@ -35,7 +35,7 @@ Once the extension is installed, you can have a **preview** by reconfiguring the
     'view' => [
         'theme' => [
             'pathMap' => [
-                '@app/views' => '@vendor/spl/yii2-material-assets/template/material-dashboard/view'
+                '@app/views' => '@vendor/paskuale75/yii2-material-assets/template/material-dashboard/view'
             ],
         ],
     ],
@@ -112,6 +112,8 @@ using bundled assets
 ### Sidebar menu - Widget Menu
 
 ```php
+        use paskuale75\widgets\Menu as SPLmenu;
+        
         $menu = SPLmenu::widget(
             [
                 'items' => [
