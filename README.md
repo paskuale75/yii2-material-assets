@@ -99,7 +99,7 @@ using bundled assets
     Yii::$container->set(
         MaterialDashboardAsset::className(),
         [
-	    'siteTitle' = 'Your Site Name',
+	    'siteTitle' => 'Your Site Name',
 	    'sidebarColor' => 'rose',
 	    'sidebarBackgroundColor' => 'black', 
 	    'sidebarBackgroundImage' => 'img url'
