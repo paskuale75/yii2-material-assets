@@ -104,17 +104,16 @@ class NavBar extends MaterialNavBar
             $this->brandLabel = Html::img($this->brandImage);
         }
         if ($this->brandLabel !== false) {
-            
             Html::addCssClass($this->brandOptions, ['widget' => 'navbar-brand']);
-             if ($this->brandUrl === null) {
+            if ($this->brandUrl === null) {
                 $brand = Html::tag('span', $this->brandLabel, $this->brandOptions);
-             } else {
+            } else {
                 $brand = Html::a(
                     $this->brandLabel,
                     $this->brandUrl === false ? Yii::$app->homeUrl : $this->brandUrl,
                     $this->brandOptions
                 );
-             }             
+            }
         }
         Html::addCssClass($this->collapseOptions, ['collapse' => 'collapse', 'widget' => 'navbar-collapse']);
         $collapseOptions = $this->collapseOptions;
@@ -124,13 +123,25 @@ class NavBar extends MaterialNavBar
         if ($this->renderInnerContainer) {
             echo Html::beginTag('div', $this->innerContainerOptions)."\n";
         }
-        
-        echo $this->renderToggleButton() . "\n";
         echo $brand . "\n";
+        echo $this->renderToggleButton() . "\n";
         echo Html::beginTag($collapseTag, $collapseOptions) . "\n";
     }
 
-    
+    /**
+     * Renders the widget.
+     */
+    public function run()
+    {
+        $tag = ArrayHelper::remove($this->collapseOptions, 'tag', 'div');
+        echo Html::endTag($tag) . "\n";
+        if ($this->renderInnerContainer) {
+            echo Html::endTag('div') . "\n";
+        }
+        $tag = ArrayHelper::remove($this->options, 'tag', 'nav');
+        echo Html::endTag($tag);
+        BootstrapPluginAsset::register($this->getView());
+    }
 
     /**
      * Renders collapsible toggle button.
@@ -138,12 +149,9 @@ class NavBar extends MaterialNavBar
      */
     protected function renderToggleButton()
     {
-        $_b = false;
         $options = $this->togglerOptions;
         Html::addCssClass($options, ['widget' => 'navbar-toggler']);
-        $_b = '<div class = "navbar-wrapper">';
-        $_b .= '<div class = "navbar-minimize">';
-        $_b .=  Html::button(
+        return Html::button(
             $this->togglerContent,
             ArrayHelper::merge($options, [
                 'type' => 'button',
@@ -156,11 +164,6 @@ class NavBar extends MaterialNavBar
                 'aria-label' => $this->screenReaderToggleText,
             ])
         );
-        $_b .= '<i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>';
-        $_b .= '<i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>';
-        $_b .= '</div></div>';
-
-        return $_b;
     }
 
     /**
