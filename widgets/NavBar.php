@@ -104,8 +104,7 @@ class NavBar extends MaterialNavBar
             $this->brandLabel = Html::img($this->brandImage);
         }
         if ($this->brandLabel !== false) {
-            Html::beginTag('div',['class'=>'navbar-wrapper']);
-            Html::beginTag('div',['class'=>'navbar-minimize']);
+            
             Html::addCssClass($this->brandOptions, ['widget' => 'navbar-brand']);
              if ($this->brandUrl === null) {
                 $brand = Html::tag('span', $this->brandLabel, $this->brandOptions);
@@ -115,9 +114,7 @@ class NavBar extends MaterialNavBar
                     $this->brandUrl === false ? Yii::$app->homeUrl : $this->brandUrl,
                     $this->brandOptions
                 );
-             }
-             Html::endTag('div');
-             Html::endTag('div');
+             }             
         }
         Html::addCssClass($this->collapseOptions, ['collapse' => 'collapse', 'widget' => 'navbar-collapse']);
         $collapseOptions = $this->collapseOptions;
@@ -140,9 +137,12 @@ class NavBar extends MaterialNavBar
      */
     protected function renderToggleButton()
     {
+        $_b = false;
         $options = $this->togglerOptions;
         Html::addCssClass($options, ['widget' => 'navbar-toggler']);
-        return Html::button(
+        $_b = '<div class = "navbar-wrapper">';
+        $_b .= '<div class = "navbar-minimize">';
+        $_b .=  Html::button(
             $this->togglerContent,
             ArrayHelper::merge($options, [
                 'type' => 'button',
@@ -155,6 +155,9 @@ class NavBar extends MaterialNavBar
                 'aria-label' => $this->screenReaderToggleText,
             ])
         );
+        $_b .= '</div></div>';
+
+        return $_b;
     }
 
     /**
