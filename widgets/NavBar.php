@@ -156,6 +156,8 @@ class NavBar extends MaterialNavBar
                 'aria-label' => $this->screenReaderToggleText,
             ])
         );
+        $_b .= '<i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>';
+        $_b .= '<i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>';
         $_b .= '</div></div>';
 
         return $_b;
