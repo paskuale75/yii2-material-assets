@@ -104,8 +104,8 @@ class NavBar extends MaterialNavBar
             $this->brandLabel = Html::img($this->brandImage);
         }
         if ($this->brandLabel !== false) {
-            Html::beginTag('div',false,['class'=>'navbar-wrapper']);
-            Html::beginTag('div',false,['class'=>'navbar-minimize']);
+            Html::beginTag('div',['class'=>'navbar-wrapper']);
+            Html::beginTag('div',['class'=>'navbar-minimize']);
             Html::addCssClass($this->brandOptions, ['widget' => 'navbar-brand']);
              if ($this->brandUrl === null) {
                 $brand = Html::tag('span', $this->brandLabel, $this->brandOptions);
