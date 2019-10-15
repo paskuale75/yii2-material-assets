@@ -132,20 +132,7 @@ class NavBar extends MaterialNavBar
         echo Html::beginTag($collapseTag, $collapseOptions) . "\n";
     }
 
-    /**
-     * Renders the widget.
-     */
-    public function run()
-    {
-        $tag = ArrayHelper::remove($this->collapseOptions, 'tag', 'div');
-        echo Html::endTag($tag) . "\n";
-        if ($this->renderInnerContainer) {
-            echo Html::endTag('div') . "\n";
-        }
-        $tag = ArrayHelper::remove($this->options, 'tag', 'nav');
-        echo Html::endTag($tag);
-        BootstrapPluginAsset::register($this->getView());
-    }
+    
 
     /**
      * Renders collapsible toggle button.
