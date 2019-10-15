@@ -6,8 +6,8 @@
  */
 
 namespace paskuale75\widgets;
-use \yii\bootstrap\Alert as BootstrapAlert;
-use \yii\bootstrap\Widget;
+use \yii\bootstrap4\Alert as BootstrapAlert;
+use \yii\bootstrap4\Widget;
 /**
  * Alert widget renders a message from session flash for material alerts. All flash messages are displayed
  * in the sequence they were assigned using setFlash. You can set message as following:

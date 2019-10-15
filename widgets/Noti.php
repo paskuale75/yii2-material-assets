@@ -1,7 +1,7 @@
 <?php
 namespace paskuale75\widgets;
 use Yii;
-use yii\bootstrap\Widget;
+use yii\bootstrap4\Widget;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 
