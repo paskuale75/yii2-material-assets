@@ -124,8 +124,9 @@ class NavBar extends MaterialNavBar
         if ($this->renderInnerContainer) {
             echo Html::beginTag('div', $this->innerContainerOptions)."\n";
         }
-        echo $brand . "\n";
+        
         echo $this->renderToggleButton() . "\n";
+        echo $brand . "\n";
         echo Html::beginTag($collapseTag, $collapseOptions) . "\n";
     }
 
