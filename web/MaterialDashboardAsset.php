@@ -31,6 +31,7 @@ class MaterialDashboardAsset extends BaseMDAsset
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap4\BootstrapAsset',
+        'yii\bootstrap4\BootstrapPluginAsset',
     ];
 
 
